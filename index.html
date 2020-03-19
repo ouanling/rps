@@ -5,26 +5,31 @@ var choicearray = [
     'scissor'
 ];
 
-
+var winlose;
 let computerPlay = () => {
     var randomNumber = Math.floor(Math.random() * choicearray.length);
     return choicearray[randomNumber];
 
 }
 function playRound(playerSelection, computerSelection) {
-    var winlose;
     switch(playerSelection) {
-case rock:
-    if computerSelection == rock { winlose = 0 } elseif computerSelection == paper { winlose = 2 } else { winlose = 1} ;
+    case 'rock':
+    if (computerSelection == 'rock') { 
+        winlose = 0; 
+    } else if (computerSelection == 'paper') { winlose = '2'; } else { winlose = '1';} 
+    if (winlose == '0') { return "tie"; } else if (winlose == '1') { return "win: rock beats scissors" ; } else { return "LOSER:paper beats rock" ; }
     break;
-    case paper:
-        if computerSelection == rock { winlose = 1} elseif computerSelection == paper { winlose = 0} else {winlose = 2};
+    case 'paper':
+        if (computerSelection == 'rock') { winlose = 1;} else if (computerSelection == 'paper') { winlose = 0;} else { winlose = 2;}
+        if (winlose == '0') { return "tie"; } else if (winlose == '1') { return "win: paper beats rock" ; } else { return "LOSER: scissors beat paper" ; }
         break;
-    case: scissor:
-    if computerSelection == rock { winlose = 2} elseif computerSelection == paper { winlose = 1} else { winlose = 0};
+    case 'scissor':
+    if (computerSelection == 'rock') { winlose = 2;} else if (computerSelection == 'paper') { winlose = 1;} else { winlose = 0;}
+    if (winlose == '0') { return "tie"; } else if (winlose == '1') { return "win: scissors beat paper" ; } else { return "LOSER: rock beats scissors" ; }
     break;
-    }
-}
+    
+    
+} }
 
 const playerSelection = 'rock'
 const computerSelection = computerPlay()
