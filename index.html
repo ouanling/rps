@@ -1,0 +1,34 @@
+<script> 
+var choicearray = [
+    'rock',
+    'paper',
+    'scissor'
+];
+
+
+let computerPlay = () => {
+    var randomNumber = Math.floor(Math.random() * choicearray.length);
+    return choicearray[randomNumber];
+
+}
+function playRound(playerSelection, computerSelection) {
+    var winlose;
+    switch(playerSelection) {
+case rock:
+    if computerSelection == rock { winlose = 0 } elseif computerSelection == paper { winlose = 2 } else { winlose = 1} ;
+    break;
+    case paper:
+        if computerSelection == rock { winlose = 1} elseif computerSelection == paper { winlose = 0} else {winlose = 2};
+        break;
+    case: scissor:
+    if computerSelection == rock { winlose = 2} elseif computerSelection == paper { winlose = 1} else { winlose = 0};
+    break;
+    }
+}
+
+const playerSelection = 'rock'
+const computerSelection = computerPlay()
+console.log(playRound(playerSelection, computerSelection))
+
+
+</script>
